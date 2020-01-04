@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 20px;
+    overflow: hidden;
+    font-family: 'Flamenco', cursive;
+}
+header{
+    background-image:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), url(../images/header.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+.row{
+    max-width: 1150px;
+    margin: 0 auto;
+
+}
+.clearfix:after{
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0px;
+    content: ".";
+}
+
+.logo{
+    height: 120px;
+    width: auto;
+    float: left;
+    margin-top: 30px;
+}
+.main-nav{
+     float: right;
+     margin-top: 80px;
+}
+.main-nav li{
+      list-style: none;
+      display: inline-block;
+      margin-left: 30px;
+}
+.main-nav li a{
+    text-decoration: none;
+    color: white;
+    font-size: 90%;
+    font-weight: 100;
+}
+.main-nav li a:hover{
+      color: peru;
+}
+.main-content-header{
+    position: relative;
+    top: 20%;
+    left: 8%;
+}
+h1{
+    color: white;
+    font-size: 240%;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    font-weight: lighter;
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: lighter;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 200px;
+    
+}
+.btn-order{
+     background-color: transparent;
+     color: tomato;
+     margin-right: 15px;
+     border: 1px solid tomato;
+
+}
+.btn-order:hover{
+    background-color: white;
+}
+.btn-show{
+    background-color: transparent;
+     color: whitesmoke;
+     border: 1px solid white;
+}
+.btn-show:hover{
+     background-color: tomato;
+}
+
+.colorChange{
+     animation: colorChange 1s infinite;
+}
+@keyframes colorChange{
+    0%{color: red;}
+    25%{color: purple;}
+    50%{color: tomato;}
+    75%{color: yellow;}
+    100%{color: violet;}
+}
+
+.tab-Version{
+    display: none;
+}
+
+  /* Rresponsive queries */
+
+  @media screen and (max-width: 1180px){
+      .main-content-header{
+          width: 100%;
+          padding: 2%;
+      }
+      .main-nav{
+          padding-right: 2%;
+      }
+      .logo{margin-left: 2%;}
+  }
+
+  
+  @media screen and (max-width: 998px){
+      h1{font-size: 200%;}
+  }
+
+  @media screen and (max-width: 768px){
+    h1{font-size: 170%;}
+    .main-nav{display: none;}
+    .tab-Version{
+        display: inline-block;
+        float: right;
+        margin-top: 30px;
+        margin-right: 30px;
+        color: white;
+    }
+     .main-nav{float: left;}
+    .main-nav li{
+        display: block;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 540px){
+
+   .btn{ display: block;
+          margin-right: 20px;
+        }
+    .btn-order{ margin-bottom: 20px; }
+    h1{font-size: 140%;
+       margin-right: 20px;
+    }
+   
+}
+
